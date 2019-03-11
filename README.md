@@ -9,6 +9,6 @@ Instructions on running the app:
 
 I recommend pycharm for the BettyAppPython project and atom as an editor for BettyApp
 
-start the python app in app.py
+Start the python app in app.py
 
-star the ionic app from the commandline within the BettyApp folder by typing 'ionic serve'
+Start the ionic app from the commandline within the BettyApp folder by typing 'ionic serve'
