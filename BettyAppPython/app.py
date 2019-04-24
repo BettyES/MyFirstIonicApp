@@ -1,8 +1,8 @@
 from flask import Flask, request
 from flask_restful import Resource, Api
-from json import dumps
-from flask_jsonpify import jsonify
 from flask_cors import CORS
+from fizzbuzz import FizzBuzz, FizzBuzzCode
+
 
 
 app = Flask(__name__, static_folder='http')
@@ -10,17 +10,14 @@ CORS(app)
 api = Api(app)
 
 
-class FizzBuzz(Resource):
-    def get(self):
-
-        return "Yay. I can return something upon pressing a button"
-
-
-
-api.add_resource(FizzBuzz, '/fizz-buzz')  # Route_1
+api.add_resource(FizzBuzz, '/fizz-buzz/<number>')  # Route_1
+api.add_resource(FizzBuzzCode, '/fizz-buzz/code')
 
 if __name__ == '__main__':
     app.run(port='5002')
+
+
+
 
 # from flask import Flask
 #
